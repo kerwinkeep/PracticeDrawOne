@@ -36,10 +36,14 @@ public class Practice8DrawArcView extends View {
 //        练习内容：使用 canvas.drawArc() 方法画弧形和扇形
         float baseLengthX = getWidth() / 3f;
         float baseLengthY = getHeight() / 4f;
-        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2, baseLengthY * 3, -25f, -90f, true, mArcPaint);
-        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2, baseLengthY * 3, 25f, 120f, false, mArcPaint);
+        mArcPaint.setStyle(Paint.Style.FILL);
+        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2,
+                baseLengthY * 3, -25f, -90f, true, mArcPaint);
+        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2,
+                baseLengthY * 3, 25f, 120f, false, mArcPaint);
         mArcPaint.setStyle(Paint.Style.STROKE);
-        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2, baseLengthY * 3, 160f, 60, false, mArcPaint);
+        canvas.drawArc(baseLengthX, baseLengthY * 2, baseLengthX * 2,
+                baseLengthY * 3, 160f, 60, false, mArcPaint);
 
     }
 }
